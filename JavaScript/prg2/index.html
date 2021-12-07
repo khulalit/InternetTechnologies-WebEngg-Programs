@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Password Protection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <h2 class="text-danger text-center" m-4>Static Password Protection</h2>
+    <form action="/" method="get" class="form-group m-4 text-center m-5">
+        <div class="label">
+            <label for="password">Password</label>
+            <small>(This is program for static password, so the correct password is pass@1234)</small>
+        </div>
+        <input type="password" name="password" id="pass" class="form-control" required >
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="ShowPass" onclick="checkhandler()">
+            <label class="form-check-label" for="ShowPass">Show Password</label>
+          </div>
+        <input type="submit" value="Submit" class=" btn btn-danger mt-4">
+        <div class="d-flex justify-content-center mt-5" id="d">
+
+        </div>
+    </form>
+    <script>
+        function checkhandler(){
+            var x = document.getElementById("pass");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+  }
+        }
+        document.querySelector('form').addEventListener('submit',(e)=>{
+            e.preventDefault();
+            let password = element('#pass');
+            // const regpass = new RegExp("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/");
+
+            if(password=='pass@1234'){
+                // document.querySelector('#d').innerHTML = "<h2>Form submitted</h2>";
+                alert("Password is correct")
+            }
+            else {
+                alert('Wrong Password !!!!')
+            }
+        })
+        let element = (c)=>{
+            return document.querySelector(c).value;
+        }
+    </script>
+</body>
+</html>

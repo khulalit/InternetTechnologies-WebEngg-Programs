@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 2 - Add|Sub|Mul</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+</head>
+<body>
+    <h1 class="text-center text-primary">
+        Addition|Subtraction|Multiplication
+    </h1>
+    <div class="container mt-5">
+        <form id="form" method="GET">
+            <div class="form-group">
+                <label for="name">Give the number 1.<span class="text-danger">*</span></label>
+                <input type="text" name="number1" id="n1" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Give the number 2.<span class="text-danger">*</span></label>
+                <input type="text" name="number2" id="n2" class="form-control" required>
+            </div>
+            <!-- select options  -->
+            <div class="form-group ml-3 border-rounded">
+                <label for="choose">Choose which operation you want to perform</label> <br><br>
+                <div class="form-group">
+                    <label for="choose">Addition   </label>
+                    <input class="form-check-input ml-3" type="radio" name="choose" id="option1" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="choose">Subtraction</label>
+                    <input class="form-check-input ml-3" type="radio" name="choose" id="option2" value="2">
+                </div>
+                <div class="form-group">
+                    <label for="choose">Multiplication</label>
+                    <input class="form-check-input ml-3" type="radio" name="choose" id="option3" value="3">
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label for="select-option">Select which implementation you want</label>
+                <select name="choose" id="slt" class="form-control">
+                    <option value="nonforeach">Scriptlet tag</option>
+                    <option value="foreach">Expression Language</option>
+                </select>
+            </div>
+            <div class="form-group text-center mt-5">
+                <input  type="submit" value="Result" class="btn btn-outline-primary w-50  form-control">
+            </div>
+           
+        </form>
+    </div>
+    <script>
+        console.log("Program is initialized ")
+        let selectvalue;
+        let selectOption = document.querySelector('#slt');
+        document.querySelector('#form').addEventListener('submit',(e)=>{
+            e.preventDefault();
+            selectvalue = selectOption.value;
+            console.log(selectvalue)
+            if(selectvalue=="foreach"){
+            document.querySelector('#form').action = 'operatec.jsp'
+                document.querySelector('#form').submit();
+            }
+            else{
+                document.querySelector('#form').action = 'operate.jsp'
+                document.querySelector('#form').submit();
+            }
+            
+        })
+        
+    </script>
+</body>
+</html>

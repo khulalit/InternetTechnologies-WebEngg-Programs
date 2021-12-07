@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <h2 class="text-danger text-center" m-4>Form Validation</h2>
+    <form action="#" class="form-group form m-5">
+        <div class="label-name">
+            <label for="name">Name</label>
+        </div>
+        <input type="text" class="form-control name" name="name" required>
+        <div class="label-name">
+            <label for="name">Rollno <small>(Rollno should be of numeric type of length 7)</small></label>
+        </div>
+        <input type="text" class="form-control rollno" name="name" required>
+        <div class="label-name">
+            <label for="name">DOB</label>
+        </div>
+        <input type="date" class="form-control date" name="name" required>
+        <input type="submit" value="Submit" class="btn btn-primary mt-4 ">
+    </form>
+    <div class="d-flex justify-content-center" id="d">
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

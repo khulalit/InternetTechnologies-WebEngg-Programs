@@ -1,0 +1,43 @@
+.adjust{
+    /* display: block; */
+    width: 20%;
+    margin-right: 1rem;
+}
+
+.stack, .status{
+    /* background:  #5bc0de  ; */
+    width: 30%;
+    padding: 20px;
+    margin: auto;
+    color: white;
+    border-radius: 4px ;
+    text-align: center;
+    margin-top: 5%;
+}
+#push{
+    margin-right: 1rem;
+}
+@media(max-width: 879px){
+    form{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    .adjust{
+        width: 80%;
+        margin-bottom: 10px;
+        margin-right: 0rem;
+    }
+    #push{
+        width: 50%;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    #pop{
+        width: 50%;
+    }
+    .bt{
+        width: 100%;
+    }
+}

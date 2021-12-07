@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ChocoBean</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container ">
+            <h1 class="text-primary">Program 6</h1>
+            <form class="form pt-5" method="get" action="home.jsp">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="name">Enter your name</label>
+                                </div>
+                    <input name="name" class="form-control" type="text" required>
+                </div>
+                <div class="form-group">
+                <label for="select-option">Please Select Texture</label>
+                <select class="custom-select form-control" id="select-option" name="select">
+                  <option name = "select1" value="chewy">Please select </option>
+                  <option value="chewy" >chewy</option>
+                  <option value="crunchy" >crunchy</option>
+                </select>
+            </div>
+                <input class=" btn btn-primary" type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

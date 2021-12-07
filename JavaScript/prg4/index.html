@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column align-items-center">
+    <div class="text-center">
+        <h1 class="text-primary">Bubble Sort</h1>
+        <small class="text-danger">Enter the input in the form of 1,2,3,5,6 and dont use space</small>
+    </div>
+    <div class="d-flex justify-content-around p-5 adjust">
+        <input type="text" id="array_input" class="form-control inline-block mr-3">
+        <input type="button" value="Sort" id="handlebutton" class="btn btn-primary pl-5 pr-5">
+    
+    </div>
+    <div class="text-center">
+        <button onclick="handle_click()" class="btn btn-danger">Clear input</button>
+
+    </div>
+
+    <div class="array bg-primary text-white">
+        <h4 class="text-white">Sorted Array :</h4>
+        <div id="result">
+
+        </div>
+    </div>
+    <style>
+        .adjust{
+            width: 80%;
+        }
+        .array, .status{
+            width: fit-content;
+            padding: 20px;
+            margin: auto;
+            color: white;
+            border-radius: 4px ;
+            text-align: center;
+            margin-top: 5%;
+            font-size: xx-large;
+}
+    </style>
+    <script src="main.js"></script>
+</body>
+</html>

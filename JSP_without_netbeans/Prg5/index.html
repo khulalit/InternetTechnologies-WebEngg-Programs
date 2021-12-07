@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Program 5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+                 .fix{
+                     margin-top: 20%;
+                 }
+        </style>
+    </head>
+    <body>
+        <div class=" container fixed-top border-bottom border-primary p-3">
+            <p class="h6 text-dark">Program 5 : Let the user enter a word a in a textbox and let her/him select one of even or odd radio
+buttons. If she/he selects odd, check the odd positions in the word entered, if they all
+contain vowels, then display the message ‘You win’, else display ‘You lose’. Similarly,
+if the user selects even, check for vowels in all even positions in the word entered. Use
+jstl’s ‘fn’ library.</p>
+            
+                <h1 class="text-primary mt-5">Welcome to ODD/EVEN game.</h1>
+                
+                
+        </div>
+        <div class="container fix">
+            <form action="server.jsp" method="GET">
+            <div class="form-group">
+                <label for="name">Enter the text/string<span class="text-danger">*</span></label>
+                <input type="text" name="word" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="select-option">Please Select Odd or Even </label>
+                <select class="custom-select form-control" id="select-option" name="select">
+                  <option name = "select1" value="nothing">Please select </option>
+                  <option value="odd" >Odd</option>
+                  <option value="even" >Even</option>
+                </select>
+            </div>
+                <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </div>
+            </form>
+        </div>
+        <div class=" container fixed-bottom border-top border-primary p-3">
+                <h4 class="text-dark mt-5">Developer's Note :<br> 1)This program do not mind whether the word is uppercase or lowercase.<br>2)White Spaces will be neglected.</h4>
+        </div>
+    </body>
+</html>
